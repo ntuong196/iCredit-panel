@@ -11,12 +11,12 @@ import { reduxFirestore, firestoreReducer } from "redux-firestore"
 
 // From https://console.firebase.google.com/u/0/project/the-trencend/overview
 const firebaseConfig = {
-    apiKey: "AIzaSyAbLjjv0n1648oxOp9lw2SMpu98-C0qqXA",
+    apiKey: process.env.apiKey,
     authDomain: "the-trencend.firebaseapp.com",
     databaseURL: "https://the-trencend.firebaseio.com",
     projectId: "the-trencend",
     storageBucket: "the-trencend.appspot.com",
-    messagingSenderId: "949977336076"
+    messagingSenderId: process.env.messagingSenderId
 }
 
 // react-redux-firebase config
