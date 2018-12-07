@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## TODO:
+
+Add Reducer
+
+Protect API key (Add process.env in front-end dev is different with the back-end)
+
 ## Available Scripts
 
 In the project directory, you can run:

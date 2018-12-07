@@ -1,5 +1,5 @@
 import { createStore, combineReducers, compose } from "redux"
-import firebase from "firebase"
+import firebase from "firebase/app"
 import "firebase/firestore"
 
 import { reactReduxFirebase, firebaseReducer } from "react-redux-firebase"
@@ -11,12 +11,12 @@ import { reduxFirestore, firestoreReducer } from "redux-firestore"
 
 // From https://console.firebase.google.com/u/0/project/the-trencend/overview
 const firebaseConfig = {
-    apiKey: process.env.apiKey,
+    apiKey: "AIzaSyAbLjjv0n1648oxOp9lw2SMpu98-C0qqXA",
     authDomain: "the-trencend.firebaseapp.com",
     databaseURL: "https://the-trencend.firebaseio.com",
     projectId: "the-trencend",
     storageBucket: "the-trencend.appspot.com",
-    messagingSenderId: process.env.messagingSenderId
+    messagingSenderId: "949977336076"
 }
 
 // react-redux-firebase config
@@ -37,7 +37,7 @@ firebase.initializeApp(firebaseConfig)
 const firestore = firebase.firestore()
 // firebase.firestore()
 
-const settings = { /* your settings... */ timestampsInSnapshots: true }
+const settings = { timestampsInSnapshots: true }
 firestore.settings(settings)
 
 // Add reactReduxFirebase enhancer when making store creator
